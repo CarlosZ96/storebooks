@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="https://www.flaticon.com/free-icon/book_207114" alt="logo" width="140"  height="auto" />
+  <img src="https://cdn-icons-png.flaticon.com/128/2436/2436702.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>Store Books</b></h3>
 
