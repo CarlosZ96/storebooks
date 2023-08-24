@@ -51,7 +51,7 @@ By building this application, you will learn how to use React.**
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
-Run git clone https://github.com/CarlosZ96/mathmagicians
+Run git clone https://github.com/CarlosZ96/storebooks/tree/Feature-structure
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ Basic Knowledge of HTML, Javascript and CSS.
 
 ### Install
 
-git clone https://github.com/CarlosZ96/mathmagicians
+git clone https://github.com/CarlosZ96/storebooks/tree/Feature-structure
 npm install
 
 ### Usage
