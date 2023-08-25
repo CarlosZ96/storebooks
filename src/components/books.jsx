@@ -2,7 +2,7 @@ import React from 'react';
 import AddNewBooks from './newbook';
 import '../StyleSheets/books.css';
 
-function Books () {
+function Books() {
   return (
     <div className="book-container">
       <div className="cards">
@@ -27,12 +27,12 @@ function Books () {
         <section className="current-chapter-container">
           <p>Current Chapter</p>
           <p>Chapter example</p>
-          <button>Update Progress</button>
+          <button type="button">Update Progress</button>
         </section>
       </div>
       <AddNewBooks />
     </div>
   );
-};
+}
 
 export default Books;
