@@ -1,6 +1,6 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
-import Books from './components/books.jsx';
+import Books from './components/books';
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
         </ul>
       </header>
       <div className="body-books">
-      <Routes>
-       <Route path="/" element= {<Books /> } />
-        <Route path="/categories" />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" />
+        </Routes>
       </div>
     </div>
   );

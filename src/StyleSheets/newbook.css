@@ -5,11 +5,11 @@
   gap: 50px;
 }
 
-.new-book-input{
+.new-book-input {
   width: 45%;
 }
 
-.categorie{
+.categorie {
   display: flex;
   flex-direction: row;
   row-gap: 5px;

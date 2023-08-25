@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNewBooks from './newbook.jsx';
+import AddNewBooks from './newbook';
 import '../StyleSheets/books.css';
 
 const Books = () => {
