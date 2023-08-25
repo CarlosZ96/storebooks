@@ -6,7 +6,7 @@ const AddNewBooks = () => {
   return (
     <div className="add-new-book">
       <input type="text" className="new-book-input" placeholder="Book Tittle" />
-      <form>
+      <form className="categorie">
         <select>
           <option >Action</option>
           <option >Romance</option>

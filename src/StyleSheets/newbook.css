@@ -8,3 +8,9 @@
 .new-book-input{
   width: 45%;
 }
+
+.categorie{
+  display: flex;
+  flex-direction: row;
+  row-gap: 5px;
+}
