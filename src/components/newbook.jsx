@@ -16,6 +16,6 @@ function AddNewBooks() {
       </form>
     </div>
   );
-};
+}
 
 export default AddNewBooks;
