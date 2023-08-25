@@ -1,9 +1,11 @@
 import React from 'react';
+import '../StyleSheets/newbook.css';
+
 
 const AddNewBooks = () => {
   return (
-    <div>
-      <input type="text" />
+    <div className="add-new-book">
+      <input type="text" className="new-book-input" placeholder="Book Tittle" />
       <form>
         <select>
           <option >Action</option>

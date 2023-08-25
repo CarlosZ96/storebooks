@@ -1,0 +1,10 @@
+.add-new-book {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  gap: 50px;
+}
+
+.new-book-input{
+  width: 45%;
+}

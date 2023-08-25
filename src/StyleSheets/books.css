@@ -1,13 +1,76 @@
-.book-container{
+.book-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
   background-color: darkslateblue;
-  width: 80%;
+  width: 90%;
+}
+
+.tittle-circle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  margin-left: 50px;
+}
+
+.book-buttons {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.book-button {
+  background: none;
+  border: none;
+}
+
+.percentage-container {
+  display: flex;
+  flex-direction: row;
+  padding-right: 60px;
+  align-items: center;
+}
+
+.percentage-img {
+  width: 80px;
+  height: 80px;
+}
+
+.Completed {
+  margin-left: 10px;
+}
+
+.current-chapter-container {
+  margin-left: 60px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current-chapter-container p {
+  margin-bottom: 5px;
+}
+
+.current-chapter-container button {
+  background-color: #0071ef;
+  border: none;
+  border-radius: 30px;
+  color: aquamarine;
 }

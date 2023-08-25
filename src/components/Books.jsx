@@ -11,16 +11,16 @@ const Books = () => {
             <p>Categorie</p>
             <h2>Book example</h2>
             <p>Author</p>
-            <ul>
-              <li><button>Comments</button></li>
-              <li><button>Remove</button></li>
-              <li><button>Edit</button></li>
+            <ul className="book-buttons">
+              <li><button className="book-button">Comments</button></li>
+              <li><button className="book-button">Remove</button></li>
+              <li><button className="book-button">Edit</button></li>
             </ul>
           </div>
           <div className="percentage-container">
-            <img src="https://cdn-icons-png.flaticon.com/128/5698/5698579.png" alt="50% cirlcle" />
+            <img src="https://cdn-icons-png.flaticon.com/128/5698/5698579.png" alt="50% cirlcle" className="percentage-img" />
             <div className="Percentage-text-container">
-              <p>Completed</p>
+              <p className="Completed">Completed</p>
             </div>
           </div>
         </section>
