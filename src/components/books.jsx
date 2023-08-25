@@ -2,7 +2,7 @@ import React from 'react';
 import AddNewBooks from './newbook';
 import '../StyleSheets/books.css';
 
-const Books = () => {
+function Books () {
   return (
     <div className="book-container">
       <div className="cards">
@@ -12,9 +12,9 @@ const Books = () => {
             <h2>Book example</h2>
             <p>Author</p>
             <ul className="book-buttons">
-              <li><button className="book-button">Comments</button></li>
-              <li><button className="book-button">Remove</button></li>
-              <li><button className="book-button">Edit</button></li>
+              <li><button type="button" className="book-button">Comments</button></li>
+              <li><button type="button" className="book-button">Remove</button></li>
+              <li><button type="button" className="book-button">Edit</button></li>
             </ul>
           </div>
           <div className="percentage-container">
@@ -33,6 +33,6 @@ const Books = () => {
       <AddNewBooks />
     </div>
   );
-}
+};
 
 export default Books;
