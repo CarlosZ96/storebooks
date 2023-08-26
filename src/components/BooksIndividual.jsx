@@ -1,6 +1,6 @@
 import React from 'react';
-import BookList from './BookList';
-import AddNewBooks from './NewBook';
+import BookList from './BookList.jsx';
+import AddNewBooks from './NewBook.js';
 import '../StyleSheets/books.css';
 
 function Book() {
