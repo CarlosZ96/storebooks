@@ -1,6 +1,6 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
-import Books from './components/books';
+import Book from './components/BooksIndividual.jsx';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       </header>
       <div className="body-books">
         <Routes>
-          <Route path="/" element={<Books />} />
+          <Route path="/" element={<Book />} />
           <Route path="/categories" />
         </Routes>
       </div>
