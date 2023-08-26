@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNewBooks from './newbook';
+import AddNewBooks from './NewBook';
 import BookList from './BookList';
 import '../StyleSheets/books.css';
 
