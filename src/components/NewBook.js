@@ -5,6 +5,7 @@ function AddNewBooks() {
   return (
     <div className="add-new-book">
       <input type="text" className="new-book-input" placeholder="Book Tittle" />
+      <input type="text" className="new-book-input" placeholder="Book Author" />
       <form className="categorie">
         <select>
           <option>Action</option>
