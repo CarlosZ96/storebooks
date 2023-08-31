@@ -10,7 +10,7 @@ const booksSlice = createSlice({
       state.books.push(action.payload);
     },
     removeBook: (state, action) => {
-      state.books.pop(action.payload)
+      state.books.pop(action.payload);
     },
   },
 });
