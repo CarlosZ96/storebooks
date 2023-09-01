@@ -30,5 +30,7 @@ function BookList() {
     </div>
   );
 }
-
+/*{products.map((product)=> (
+  <ProItem key={product.id} data={product} addToCart={addToCart}/>
+  ))}  */
 export default BookList;
