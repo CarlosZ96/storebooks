@@ -1,12 +1,15 @@
 import React from 'react';
 import '../StyleSheets/booklist.css';
+import { useSelector } from 'react-redux';
 
 function BookList() {
+  const books = useSelector((state) => state.books.books);
+  const firstBookCategory = books.length > 0 ? books[0].category : '';
   return (
     <div className="BooksListC">
       <section className="tittle-circle-container">
         <div className="book-info">
-          <p>Categorie</p>
+          <p>{firstBookCategory}</p>
           <h2>Book example</h2>
           <p>Author</p>
           <ul className="book-buttons">
