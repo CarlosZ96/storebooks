@@ -4,7 +4,7 @@ import categoriesReducer from './categories/categoriesSlice';
 
 
 const rootReducer = {
-  booksl: booksReducer,
+  books: booksReducer,
   categories: categoriesReducer,
 };
 

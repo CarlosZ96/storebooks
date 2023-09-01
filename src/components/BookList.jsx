@@ -1,24 +1,23 @@
 import React from 'react';
 import '../StyleSheets/booklist.css';
 import { useSelector } from 'react-redux';
+import BookActions from './bookActions';
+
 
 function BookList() {
-  const categories = useSelector((state) => state.categories.categories);
+  const books = useSelector((state) => state.books.books);
+ 
   return (
     <>
       {
-        categories.map((book, index) => (
+        books.map((book, index) => (
           <div key ={index} className="BooksListC">
             <section className="tittle-circle-container">
               <div className="book-info">
                 <p>{book.title}</p>
                 <h2>{book.author}</h2>
                 <p>{book.category}</p>
-                <ul className="book-buttons">
-                  <li><button type="button" className="book-button">Comments</button></li>
-                  <li><button type="button" className="book-button">Remove</button></li>
-                  <li><button type="button" className="book-button">Edit</button></li>
-                </ul>
+                <BookActions key={books.id} id={book.id}/>
               </div>
               <div className="percentage-container">
                 <img src="https://cdn-icons-png.flaticon.com/128/5698/5698579.png" alt="50% cirlcle" className="percentage-img" />
@@ -38,7 +37,4 @@ function BookList() {
     </>
   );
 }
-/*{products.map((product)=> (
-  <ProItem key={product.id} data={product} addToCart={addToCart}/>
-  ))}  */
 export default BookList;
