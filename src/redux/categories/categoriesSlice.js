@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const categoriesSlice = createSlice({
   name: 'categories',
   initialState: {
-    categories: [  ],
+    categories: [],
   },
   reducers: {
     checkStatus: (state, action) => {

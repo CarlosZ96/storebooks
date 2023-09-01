@@ -1,10 +1,9 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import Book from './components/BooksIndividual';
-
+import Categories from './components/Categories';
 
 function App() {
-
   return (
     <div className="App">
       <header className="Header-Container">
@@ -17,7 +16,7 @@ function App() {
       <div className="body-books">
         <Routes>
           <Route path="/" element={<Book />} />
-          <Route path="/categories" />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </div>
     </div>

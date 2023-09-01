@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
-import PropTypes from 'prop-types';
 
-const BookActions = ({id}) => {
+const BookActions = ({ id }) => {
   const dispatch = useDispatch();
   const handleRemoveClick = () => {
     dispatch(removeBook(id));
@@ -16,8 +16,8 @@ const BookActions = ({id}) => {
         <li><button type="button" className="book-button">Edit</button></li>
       </ul>
     </>
-  )
-}
+  );
+};
 
 BookActions.propTypes = {
   id: PropTypes.string.isRequired,

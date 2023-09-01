@@ -1,0 +1,12 @@
+.container-img-w{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Work {
+  width: 150px;
+  height: 150px;
+}

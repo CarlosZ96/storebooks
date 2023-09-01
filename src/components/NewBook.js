@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../StyleSheets/newbook.css';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
-import { useState } from 'react';
 
 function AddNewBooks() {
   const dispatch = useDispatch();
@@ -13,7 +12,7 @@ function AddNewBooks() {
   const EventListener = (e) => {
     if (e.target.placeholder === 'Book Title') {
       setTitleValue(e.target.value);
-      setId(id+1)
+      setId(id + 1);
     } else {
       setAuthorValue(e.target.value);
     }
