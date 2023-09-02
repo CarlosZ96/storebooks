@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import '../StyleSheets/newbook.css';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
+import { nanoid } from '@reduxjs/toolkit';
 
 function AddNewBooks() {
   const dispatch = useDispatch();
   const [titleValue, setTitleValue] = useState('');
   const [authorValue, setAuthorValue] = useState('');
-  const [id, setId] = useState(0);
 
   const EventListener = (e) => {
     if (e.target.placeholder === 'Book Title') {
       setTitleValue(e.target.value);
-      setId(id + 1);
     } else {
       setAuthorValue(e.target.value);
     }
@@ -20,7 +19,7 @@ function AddNewBooks() {
 
   const AddBookListener = () => {
     dispatch(addBook({
-      id: id,
+      id: nanoid(),
       title: titleValue,
       completed: '0%',
       author: authorValue,
