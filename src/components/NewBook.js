@@ -20,7 +20,7 @@ function AddNewBooks() {
 
   const AddBookListener = () => {
     dispatch(addBook({
-      itemId: id,
+      id: id,
       title: titleValue,
       completed: '0%',
       author: authorValue,
@@ -42,7 +42,7 @@ function AddNewBooks() {
           <option>Fantasy</option>
           <option>Mystery</option>
         </select>
-        <button type="button" onClick={ AddBookListener } >Add Book</button>
+        <button type="button" onClick={AddBookListener}>Add Book</button>
       </form>
     </div>
   );
