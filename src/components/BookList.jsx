@@ -8,8 +8,8 @@ function BookList() {
   return (
     <>
       {
-        books.map((book, index) => (
-          <div key={index} className="BooksListC">
+        books.map((book) => (
+          <div key={book.id} className="BooksListC">
             <section className="tittle-circle-container">
               <div className="book-info">
                 <p>{book.title}</p>

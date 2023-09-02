@@ -42,7 +42,7 @@ function AddNewBooks() {
           <option>Fantasy</option>
           <option>Mystery</option>
         </select>
-        <button type="button" onClick={AddBookListener} >Add Book</button>
+        <button type="button" onClick={ AddBookListener } >Add Book</button>
       </form>
     </div>
   );
