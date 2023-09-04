@@ -93,7 +93,7 @@ npm run build
 ## 🔭 Future Features <a name="future-features"></a>
 
 -  **Attractive UI**
--  **Advance Math Operations**
+-  **Api**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
