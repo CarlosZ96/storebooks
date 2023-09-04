@@ -119,5 +119,10 @@ I want to thank for pressing  https://www.freepik.es/ icons for free. <br>
 
 I would like to thank Microverse for giving me this wonderful opportunity to work on this project<br>
 
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
