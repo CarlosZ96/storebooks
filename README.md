@@ -52,7 +52,7 @@ You will create an simplified version of it that allows you to:
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
-Run git clone https://github.com/CarlosZ96/mathmagicians
+Run git clone https://github.com/CarlosZ96/storebooks
 
 ### Prerequisites
 
@@ -60,7 +60,7 @@ Basic Knowledge of HTML, Javascript and CSS.
 
 ### Install
 
-git clone https://github.com/CarlosZ96/mathmagicians
+git clone https://github.com/CarlosZ96/storebooks
 npm install
 
 ### Usage
