@@ -28,13 +28,13 @@
 
 # 📖BookStore📖 <a name="about-project"></a>
 
-**The 📖BookStore📖 is a website similar to the "Awesome Books" website built in the previous module.
+The 📖BookStore📖 is a website similar to the "Awesome Books" website built in the previous module.
 
 You will create an simplified version of it that allows you to:
 
 - Display a list of books
 - Add a book
-- Remove a selected book**
+- Remove a selected book
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
