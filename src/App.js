@@ -2,8 +2,18 @@ import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import Book from './components/BooksIndividual';
 import Categories from './components/Categories';
+import { useDispatch } from 'react-redux';
+import { getBooks } from './redux/books/booksSlice';
+import { useEffect } from 'react';
+
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]); 
+
   return (
     <div className="App">
       <header className="Header-Container">
