@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const getBooks = createAsyncThunk(
   "books/getBooks",
-  async (arg, { getState, rejectWithValue }) => {
+  async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
         'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books'
@@ -33,29 +33,58 @@ export const getBooks = createAsyncThunk(
   }
 );
 
+export const addBook = createAsyncThunk(
+  'books/addBook',
+  async (payload, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books',
+        payload.newBookOBjt,
+      );
+      console.log('libro nuevo:'+ response);
+      if (!response) {
+        return Error('Error when creating a new book.');
+      }
+      return payload.newBookOBjt;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  },
+);
+
+export const removeBook = createAsyncThunk(
+  'books/removeBook',
+  async (payload, { rejectWithValue }) => {
+    try {
+      const response = await axios.delete(
+        `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books/${payload.getBookId}`,
+      );
+      if (!response) {
+        return Error('Error when deleting a book.');
+      }
+      return payload.getBookId;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  },
+);
+
 const bookslSlice = createSlice({
   name: 'books',
   initialState: {
     books: [],
-    loading: false,
-    isSuccess: false,
-    message: "",
-  },
-  reducers: {
-    addBook: (state, action) => {
-      state.books.push(action.payload);
-    },
-    removeBook: (state, action) => {
-      const itemId = action.payload;
-      state.books = state.books.filter((book) => book.id !== itemId);
-    },
   },
   extraReducers: (builder) => {
     builder.addCase(getBooks.fulfilled, (state, action) => {
       state.books = action.payload;
     });
+    builder.addCase(addBook.fulfilled, (state, action) => {
+      state.books.push(action.payload);
+    });
+    builder.addCase(removeBook.fulfilled, (state, action) => {
+      state.books = state.books.filter((book) => book.item_id !== action.payload);
+    });
   },
 });
 
-export const { addBook, removeBook } = bookslSlice.actions;
 export default bookslSlice.reducer;

@@ -2,7 +2,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import React, { useState } from 'react';
 import '../StyleSheets/newbook.css';
 import { useDispatch } from 'react-redux';
-import { addBook, getBooks } from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 
 function AddNewBooks() {
   const dispatch = useDispatch();
@@ -18,13 +18,18 @@ function AddNewBooks() {
   };
 
   const AddBookListener = () => {
-    dispatch(addBook({
-      id: nanoid(),
+    const arg = '';
+    const newBookOBjt = {
+      item_id: nanoid(),
       title: titleValue,
       completed: '0%',
       author: authorValue,
       category: 'action',
       chapter: '1',
+    }
+    dispatch(addBook({
+      arg,
+      newBookOBjt,
     }));
     setTitleValue('');
     setAuthorValue('');

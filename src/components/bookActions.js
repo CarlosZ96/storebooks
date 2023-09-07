@@ -6,7 +6,10 @@ import { removeBook } from '../redux/books/booksSlice';
 const BookActions = ({ id }) => {
   const dispatch = useDispatch();
   const handleRemoveClick = () => {
-    dispatch(removeBook(id));
+    dispatch(removeBook({
+      getBookId: id,
+    }));
+    console.log('Click');
   };
   return (
     <>
