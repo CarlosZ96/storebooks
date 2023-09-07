@@ -2,35 +2,31 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const getBooks = createAsyncThunk(
-  "getLorems",
-  async (arg, { rejectWithValue }) => {
+  "books/getBooks",
+  async (arg, { getState, rejectWithValue }) => {
     try {
-      const { response } = await axios.get(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jsq4RL15t3XvwsIMmWiv/books'
+      const response = await axios.get(
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books'
       );
-      const data = await response;
-
-      const BooksListByID = Object.keys(data.data);
-      const BooksListApi = [];
-      BooksListByID.forEachforEach((idBook) => {
-        const booksProperties = Object.keys(data.data[idBook]);
-        booksProperties.forEach((firstKey) => {
-          const authorApi = data.data[idBook][firstKey].author;
-          const titleApi = data.data[idBook][firstKey].title;
-          const categoryApi = data.data[idBook][firstKey].category;
-          BooksListApi.push(
-            {
-              item_id: idBook,
-              author: authorApi,
-              title: titleApi,
-              category: categoryApi,
-              completed: 0,
-              chapter: 'Chapter 1',
-            },
-          );
-        });
+      const data = response.data;
+      console.log(data);
+      const booksIds = Object.keys(data);
+      console.log(booksIds);
+      const booksApi = [];
+      booksIds.forEach(bookId => {
+        const AuthorApi = data[bookId][0].author;
+        const TitleApi = data[bookId][0].title;
+        const CaregoryApi = data[bookId][0].category;
+        booksApi.push(
+          {
+            item_id: bookId,
+            author: AuthorApi,
+            title: TitleApi,
+            category: CaregoryApi,
+          },
+        );
       });
-      return BooksListApi;
+      return booksApi; 
     } catch (error) {
       rejectWithValue(error.response);
     }
@@ -38,7 +34,7 @@ export const getBooks = createAsyncThunk(
 );
 
 const bookslSlice = createSlice({
-  name: 'booksl',
+  name: 'books',
   initialState: {
     books: [],
     loading: false,
@@ -53,17 +49,11 @@ const bookslSlice = createSlice({
       const itemId = action.payload;
       state.books = state.books.filter((book) => book.id !== itemId);
     },
-    extraReducers: (builder) => {
-      builder.addCase(getBooks.fulfilled, (state, action) => {
-        state.bookItems = action.payload;
-      });
-      builder.addCase(getBooks.rejected, (state, action) => {
-        state.error = action.payload;
-      });
-      builder.addCase(removeBook.fulfilled, (state, action) => {
-        state.bookItems = state.bookItems.filter((bookId) => bookId.item_id !== action.payload);
-      });
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getBooks.fulfilled, (state, action) => {
+      state.books = action.payload;
+    });
   },
 });
 
