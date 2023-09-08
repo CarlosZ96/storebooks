@@ -1,4 +1,4 @@
-      /* eslint-disable prefer-destructuring */
+/* eslint-disable prefer-destructuring */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
