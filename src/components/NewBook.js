@@ -18,13 +18,18 @@ function AddNewBooks() {
   };
 
   const AddBookListener = () => {
-    dispatch(addBook({
-      id: nanoid(),
+    const arg = '';
+    const newBookOBjt = {
+      item_id: nanoid(),
       title: titleValue,
       completed: '0%',
       author: authorValue,
       category: 'action',
       chapter: '1',
+    };
+    dispatch(addBook({
+      arg,
+      newBookOBjt,
     }));
     setTitleValue('');
     setAuthorValue('');

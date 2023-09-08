@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../StyleSheets/booklist.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import BookActions from './bookActions';
+import { getBooks } from '../redux/books/booksSlice';
 
 function BookList() {
-  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+  const { books } = useSelector((store) => store.books);
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
   return (
     <>
       {
         books.map((book) => (
-          <div key={book.id} className="BooksListC">
+          <div key={book.item_id} className="BooksListC">
             <section className="tittle-circle-container">
               <div className="book-info">
                 <p>{book.title}</p>
                 <h2>{book.author}</h2>
                 <p>{book.category}</p>
-                <BookActions key={books.id} id={book.id} />
+                <BookActions key={books.item_id} id={book.item_id} />
               </div>
               <div className="percentage-container">
                 <img src="https://cdn-icons-png.flaticon.com/128/5698/5698579.png" alt="50% cirlcle" className="percentage-img" />
