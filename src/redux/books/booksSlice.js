@@ -2,16 +2,14 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const getBooks = createAsyncThunk(
-  "books/getBooks",
+  'books/getBooks',
   async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books'
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books',
       );
       const data = response.data;
-      console.log(data);
       const booksIds = Object.keys(data);
-      console.log(booksIds);
       const booksApi = [];
       booksIds.forEach(bookId => {
         const AuthorApi = data[bookId][0].author;
@@ -26,10 +24,10 @@ export const getBooks = createAsyncThunk(
           },
         );
       });
-      return booksApi; 
+      return booksApi;
     } catch (error) {
       rejectWithValue(error.response);
-    }
+    };
   }
 );
 
@@ -41,7 +39,6 @@ export const addBook = createAsyncThunk(
         'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books',
         payload.newBookOBjt,
       );
-      console.log('libro nuevo:'+ response);
       if (!response) {
         return Error('Error when creating a new book.');
       }

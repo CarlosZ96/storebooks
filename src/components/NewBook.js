@@ -26,7 +26,7 @@ function AddNewBooks() {
       author: authorValue,
       category: 'action',
       chapter: '1',
-    }
+    };
     dispatch(addBook({
       arg,
       newBookOBjt,
