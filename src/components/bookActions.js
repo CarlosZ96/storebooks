@@ -9,7 +9,6 @@ const BookActions = ({ id }) => {
     dispatch(removeBook({
       getBookId: id,
     }));
-    console.log('Click');
   };
   return (
     <>

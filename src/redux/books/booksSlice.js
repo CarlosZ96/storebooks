@@ -27,8 +27,8 @@ export const getBooks = createAsyncThunk(
       });
       return booksApi;
     } catch (error) {
-      rejectWithValue(error.response)
-    };
+      return rejectWithValue(error.response);
+    }
   },
 );
 
