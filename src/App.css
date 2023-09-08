@@ -10,6 +10,7 @@
   flex-direction: column;
   gap: 50px;
   background-color: mediumslateblue;
+  height: 100%;
 }
 
 .Header-Container {
