@@ -8,10 +8,11 @@ export const getBooks = createAsyncThunk(
       const response = await axios.get(
         'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JX6HgfhVoknuk7ZGztbn/books',
       );
+      /* eslint-disable prefer-destructuring */
       const data = response.data;
       const booksIds = Object.keys(data);
       const booksApi = [];
-      booksIds.forEach(bookId => {
+      booksIds.forEach((bookId) => {
         const AuthorApi = data[bookId][0].author;
         const TitleApi = data[bookId][0].title;
         const CaregoryApi = data[bookId][0].category;
@@ -26,9 +27,9 @@ export const getBooks = createAsyncThunk(
       });
       return booksApi;
     } catch (error) {
-      rejectWithValue(error.response);
+      rejectWithValue(error.response)
     };
-  }
+  },
 );
 
 export const addBook = createAsyncThunk(
