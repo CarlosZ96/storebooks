@@ -2,14 +2,14 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  color: aqua;
+  color:dodgerblue;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  background-color: mediumslateblue;
+  background-color:darkgray;
   height: 100%;
 }
 
@@ -18,7 +18,7 @@
   flex-direction: row;
   gap: 15%;
   border-bottom: 2px solid #000;
-  background-color: darkslateblue;
+  background-color:aliceblue;
 }
 
 .Tittle {
