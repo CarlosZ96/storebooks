@@ -18,22 +18,23 @@ function BookList() {
           <div key={book.item_id} className="BooksListC">
             <section className="tittle-circle-container">
               <div className="book-info">
-                <p>{book.title}</p>
-                <h2>{book.author}</h2>
-                <p>{book.category}</p>
+                <p className="categorie">{book.category}</p>
+                <h2>{book.title}</h2>
+                <p className="author">{book.author}</p>
                 <BookActions key={books.item_id} id={book.item_id} />
               </div>
               <div className="percentage-container">
-                <img src="https://cdn-icons-png.flaticon.com/128/5698/5698579.png" alt="50% cirlcle" className="percentage-img" />
+                <img src="https://i.stack.imgur.com/2UAyy.png" alt="50% cirlcle" className="percentage-img" />
                 <div className="Percentage-text-container">
+                  <p className="percentage">25%</p>
                   <p className="Completed">Completed</p>
                 </div>
               </div>
             </section>
             <section className="current-chapter-container">
-              <p>Current Chapter</p>
-              <p>Chapter example</p>
-              <button type="button">Update Progress</button>
+              <p className="current-chapter">CURRENT CHAPTER</p>
+              <p className="chapter">Chapter 1</p>
+              <button type="button">UPDATE PROGRESS</button>
             </section>
           </div>
         ))

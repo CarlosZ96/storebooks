@@ -1,18 +1,26 @@
+.new-book-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
 .add-new-book {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
   gap: 30px;
-  background-color: darkslateblue;
-  padding: 10px;
+  background-color: #eff1f3;
+  padding: 10px 0 10px 0;
   margin-bottom: 50px;
 }
 
 .new-book-input {
   width: 45%;
-  border: 3px solid #000;
-  font-size: large;
+  border: 1px solid #c4c4c4;
+  font-size: medium;
   font-style: oblique;
+  border-radius: 2px;
+  padding: 6px;
 }
 
 .categorie {
@@ -24,7 +32,26 @@
 
 .categorie select,
 button {
-  background-color: darkslateblue;
-  border-color: aqua;
+  background-color: #fff;
+  border-color: blac;
   cursor: pointer;
+  color: black;
+  width: 100%;
+}
+
+.categorie button {
+  background-color: #248cff;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+}
+.categorie select {
+  color: grey;
+  border: none;
+  border-radius: 2px;
+  border: 1px solid #c4c4c4;
+}
+
+h2 {
+  color: gray;
 }

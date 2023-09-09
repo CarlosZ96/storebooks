@@ -15,10 +15,10 @@ function App() {
   return (
     <div className="App">
       <header className="Header-Container">
-        <h1 className="Tittle">CZ BookStore:</h1>
+        <h1 className="Tittle">CZ BookStore</h1>
         <ul className="books-menu">
-          <Link to="/"><li className="menu">Books</li></Link>
-          <Link to="/categories"><li className="menu">Categories</li></Link>
+          <Link to="/"><li className="menu">BOOKS</li></Link>
+          <Link to="/categories"><li className="menuc">CATEGORIES</li></Link>
         </ul>
       </header>
       <div className="body-books">
