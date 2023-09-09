@@ -33,7 +33,6 @@
 .categorie select,
 button {
   background-color: #fff;
-  border-color: blac;
   cursor: pointer;
   color: black;
   width: 100%;
@@ -45,9 +44,9 @@ button {
   border: none;
   border-radius: 2px;
 }
+
 .categorie select {
   color: grey;
-  border: none;
   border-radius: 2px;
   border: 1px solid #c4c4c4;
 }
