@@ -16,11 +16,21 @@
 .Header-Container {
   display: flex;
   flex-direction: row;
-  gap: 15%;
-  border-bottom: 1px solid #c4c4c4;
-  background-color: #fff;
+  gap: 5%;
+  width: 100%;
   height: 60px;
   align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 10px 0 10px 0;
 }
 
 .Tittle {
@@ -42,11 +52,20 @@
 }
 
 .menu {
-  color: black;
+  color: dimgray;
   letter-spacing: 2px;
+  font-size: 14px;
 }
 
 .menuc {
   color: darkgray;
   letter-spacing: 2px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border: #c4c4c4 solid 1px;
+  border-radius: 90px;
+  margin-right: 6%;
 }

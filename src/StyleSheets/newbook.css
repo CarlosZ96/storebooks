@@ -15,19 +15,20 @@
 }
 
 .new-book-input {
-  width: 45%;
+  width: 55%;
   border: 1px solid #c4c4c4;
   font-size: medium;
   font-style: oblique;
   border-radius: 2px;
   padding: 6px;
+  color: gray;
 }
 
 .categorie {
   display: flex;
   flex-direction: row;
-  row-gap: 5px;
-  gap: 5px;
+  gap: 20px;
+  width: 45%;
 }
 
 .categorie select,
@@ -35,7 +36,6 @@ button {
   background-color: #fff;
   cursor: pointer;
   color: black;
-  width: 100%;
 }
 
 .categorie button {
@@ -43,12 +43,14 @@ button {
   color: #fff;
   border: none;
   border-radius: 2px;
+  width: 30%;
 }
 
 .categorie select {
   color: grey;
   border-radius: 2px;
   border: 1px solid #c4c4c4;
+  width: 70%;
 }
 
 h2 {

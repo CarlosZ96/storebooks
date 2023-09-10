@@ -43,12 +43,12 @@ function AddNewBooks() {
         <input type="text" className="new-book-input" placeholder="Book Author" onChange={EventListener} />
         <form className="categorie">
           <select>
+            <option>Category</option>
             <option>Action</option>
-            <option>Romance</option>
             <option>Fantasy</option>
             <option>Mystery</option>
           </select>
-          <button type="button" onClick={AddBookListener}>Add Book</button>
+          <button type="button" onClick={AddBookListener}>ADD BOOK</button>
         </form>
       </div>
     </div>
