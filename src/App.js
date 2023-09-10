@@ -5,6 +5,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import Book from './components/BooksIndividual';
 import Categories from './components/Categories';
 import { getBooks } from './redux/books/booksSlice';
+import userIcon from './components/userIcon.png';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,12 +15,15 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      <header className="Header-Container">
-        <h1 className="Tittle">CZ BookStore:</h1>
-        <ul className="books-menu">
-          <Link to="/"><li className="menu">Books</li></Link>
-          <Link to="/categories"><li className="menu">Categories</li></Link>
-        </ul>
+      <header className="nav-container">
+        <div className="Header-Container">
+          <h1 className="Tittle">CZ BookStore</h1>
+          <ul className="books-menu">
+            <Link to="/"><li className="menu">BOOKS</li></Link>
+            <Link to="/categories"><li className="menuc">CATEGORIES</li></Link>
+          </ul>
+        </div>
+        <img src={userIcon} alt="user icon" className="user-icon" />
       </header>
       <div className="body-books">
         <Routes>

@@ -1,10 +1,10 @@
 .BooksListC {
   display: flex;
   flex-direction: row;
-  background-color: darkslateblue;
+  background-color: #fff;
   width: 90%;
-  border-radius: 10px;
-  padding: 20px 0;
+  border-radius: 2px;
+  padding: 15px 0;
 }
 
 .tittle-circle-container {
@@ -20,6 +20,15 @@
   justify-content: center;
   width: 200px;
   margin-left: 50px;
+}
+
+.book-info h2 {
+  color: black;
+  width: max-content;
+}
+
+.author {
+  color: #65aeff;
 }
 
 .book-buttons {
@@ -46,7 +55,14 @@
   height: 80px;
 }
 
+.percentage {
+  font-size: 30px;
+  margin-left: 10px;
+  color: black;
+}
+
 .Completed {
+  color: gray;
   margin-left: 10px;
 }
 
@@ -62,9 +78,26 @@
   margin-bottom: 5px;
 }
 
+.current-chapter {
+  color: gray;
+}
+
+.chapter {
+  color: black;
+}
+
 .current-chapter-container button {
-  background-color: #0071ef;
+  background-color: #248cff;
   border: none;
-  border-radius: 30px;
-  color: aquamarine;
+  border-radius: 3px;
+  color: #fff;
+  height: 30px;
+  width: 160px;
+  padding: 8px 12px 8px 12px;
+  font-size: 10.5px;
+}
+
+.categorie {
+  font-weight: bold;
+  color: grey;
 }

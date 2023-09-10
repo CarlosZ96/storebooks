@@ -36,18 +36,21 @@ function AddNewBooks() {
   };
 
   return (
-    <div className="add-new-book">
-      <input type="text" className="new-book-input" placeholder="Book Title" onChange={EventListener} />
-      <input type="text" className="new-book-input" placeholder="Book Author" onChange={EventListener} />
-      <form className="categorie">
-        <select>
-          <option>Action</option>
-          <option>Romance</option>
-          <option>Fantasy</option>
-          <option>Mystery</option>
-        </select>
-        <button type="button" onClick={AddBookListener}>Add Book</button>
-      </form>
+    <div className="new-book-container">
+      <h2>ADD NEW BOOK</h2>
+      <div className="add-new-book">
+        <input type="text" className="new-book-input" placeholder="Book Title" onChange={EventListener} />
+        <input type="text" className="new-book-input" placeholder="Book Author" onChange={EventListener} />
+        <form className="categorie">
+          <select>
+            <option>Category</option>
+            <option>Action</option>
+            <option>Fantasy</option>
+            <option>Mystery</option>
+          </select>
+          <button type="button" onClick={AddBookListener}>ADD BOOK</button>
+        </form>
+      </div>
     </div>
   );
 }
