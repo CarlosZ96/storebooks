@@ -1,7 +1,7 @@
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes, NavLink } from 'react-router-dom';
 import Book from './components/BooksIndividual';
 import Categories from './components/Categories';
 import { getBooks } from './redux/books/booksSlice';
@@ -19,8 +19,8 @@ function App() {
         <div className="Header-Container">
           <h1 className="Tittle">CZ BookStore</h1>
           <ul className="books-menu">
-            <Link to="/"><li className="menu">BOOKS</li></Link>
-            <Link to="/categories"><li className="menuc">CATEGORIES</li></Link>
+            <NavLink to="/"><li className="menu">BOOKS</li></NavLink>
+            <NavLink to="/categories"><li className="menuc">CATEGORIES</li></NavLink>
           </ul>
         </div>
         <img src={userIcon} alt="user icon" className="user-icon" />
