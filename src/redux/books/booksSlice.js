@@ -18,8 +18,8 @@ export const getBooks = createAsyncThunk(
         const CaregoryApi = data[bookId][0].category;
         booksApi.push(
           {
-            item_id: bookId,
-            author: AuthorApi,
+            id: bookId,
+            name: AuthorApi,
             title: TitleApi,
             category: CaregoryApi,
           },
